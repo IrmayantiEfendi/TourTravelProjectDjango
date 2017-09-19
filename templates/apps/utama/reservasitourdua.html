@@ -1,0 +1,340 @@
+{% load static %}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Xtreme Travel a Travel Agency Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Xtreme Travel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/static/css/styles.css?v=1.6" rel="stylesheet">
+<!-- js -->
+<script src="/static/js/jquery-1.11.1.min.js"></script>
+<script src="/static/js/scripts.js?v=1.7"></script>
+<!-- //js -->
+<!--FlexSlider-->
+		<link rel="stylesheet" href="/static/css/flexslider.css" type="text/css" media="screen" />
+		<script defer src="/static/js/jquery.flexslider.js"></script>
+		<script type="text/javascript">
+		$(window).load(function(){
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}
+		  });
+		});
+	  </script>
+<!--End-slider-script-->
+<!-- pop-up-script -->
+<script src="/static/js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="/static/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files -->
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('.view-seventh a').Chocolat();
+		});
+		</script>
+<!-- //pop-up-script -->
+<script src="/static/js/easyResponsiveTabs.js" type="text/javascript"></script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="/static/js/move-top.js"></script>
+<script type="text/javascript" src="/static/js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>
+<!-- Ajax -->
+<script src="/static/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+        $('#Paket').change(function(result){
+            if ($(this).val() > 0) {
+                 var Harga = $('#Paket').val()
+                 var nilai = document.getElementById('#Paket')
+               $(document).ready(function(result){
+                $('#Harga').html(' <input type="text" value='+Harga+' id="Harga" name="Harga" class="typeahead1 input-md form-control tt-input" disable=True> ')
+                //alert(nilai)
+               
+               });
+            }else if($(this).val() == 0) {
+                 $(document).ready(function(result){
+                $('#Harga').html(' <input type="text" placeholder=Harga id="Harga" name="Harga" class="typeahead1 input-md form-control tt-input" disable=True> ')
+            });
+            }
+        });
+        $('#Jumlah_Pax').change(function(result){
+            if ($('#Jumlah_Pax').val() > 0) {
+            var Pax = $('#Jumlah_Pax').val()
+             var Harga = $('#Paket').val()
+             $(document).ready(function(result){
+                $('#Total').html('<input type="text" placeholder='+Harga * Pax+' id="Total" name="Total" class="typeahead1 input-md form-control tt-input" required>')
+                 });
+        }
+    });
+
+    });
+</script>
+</head>
+
+<body>
+<!-- banner -->
+
+    <div class="banner">
+        <div class="header-top">
+            <div class="container">
+
+                <div class="top-nav">
+                    <div class="hero fa-navicon fa-2x nav_slide_button" id="hero">
+                        <a href="#"><img src="images/menu.png" alt=""></a>
+                    </div>
+                </div> 
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="banner-info">
+            <div class="container">
+                <h1>Book Your Best Trip</h1>
+                <div class="sap_tabs">
+                </div>
+                <div id="horizontalTab" style="display: block; width:100%; margin: 0px;">
+                    <ul class="resp-tabs-list">
+                        <li class="resp-tab-item grid1" aria-controls="tab_item-0" role="tab" id="Destinasi">
+                            <span>
+                                <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+                                Reservasi Tour {{destinasi.Tempat}}
+                            </span>
+                        </li>
+                    </ul>
+
+                    <div class="resp-tabs-container">
+                        <h2 class="resp-accordion" role="tab" aria-controls="tab_item-0">
+                            <span class="resp-arrow"></span>
+                            "Reservasi Tour"
+                        </h2>
+
+                        <div class="tab-1- resp-tab-content resp-tab-content- active" aria-labelledby="tab_item-0" style="display:block">
+                            <div class="facts">
+                                <div class="booking-form">
+                                    <div class="online_reservation">
+                                        <div class="b_room">
+                                            <div class="booking_room">
+                                                <div class="reservation">
+                                                    <ul>
+                                                        <li class="span1_of_1 desti1">
+                                                         <form method="post" action="/simpan_pesanan">
+                                                                 {%csrf_token%}
+                                                            <div class="book_date" id="Nilai">
+
+                                                                    <br>
+                                                                    <span aria-hidden="true">
+                                                                    </span>
+                                                                    <input type="text" id="Nama" name="Nama_Depan" placeholder="Nama Depan Anda" class="typeahead1 input-md form-control tt-input" required>
+
+                                                            </div>
+                                                        </li>
+                                                         <li class="span1_of_1 desti1">
+                                                            <div class="book_date">
+                                                            <br>
+                                                                    <span aria-hidden="true">
+                                                                    </span>
+                                                                    <input type="text" id="Email" name="Email" placeholder="Email Anda" class="typeahead1 input-md form-control tt-input" required>
+                                                            </div>
+                                                        </li>
+                                                        <div class="clearfix"></div>
+                                                    </ul>
+                                                </div>
+                                                <div class="reservation">
+                                                    <ul>
+                                                     <link rel="stylesheet" href="/static/css/jquery-ui.css" />
+                                                                        <script src="/static/js/jquery-ui.js"></script>
+                                                                          <script>
+                                                                                  $(function() {
+                                                                                    $( "#Waktu_Berangkat,#Waktu_Pulang" ).datepicker();
+                                                                                  });
+                                                                          </script>
+
+                                                       <li  class="span1_of_1">
+                                                         <h5>Waktu Keberangkatan</h5>
+                                                         <div class="book_date">
+
+                                                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                                            <input class="date" name="Waktu_Berangkat" id="Waktu_Berangkat" type="text" value="19/10/2015" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '19/10/2015';}" required="">
+
+                                                         </div>
+                                                     </li>
+                                                    <li  class="span1_of_1 left">
+                                                         <h5>Waktu Kembali</h5>
+                                                         <div class="book_date">
+
+                                                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                                            <input class="date" id="Waktu_Pulang" name="Waktu_Pulang" type="text" value="19/10/2015" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '19/10/2015';}" required="">
+
+                                                         </div>
+                                       
+                                                     </li>
+
+                                                        <li class="span1_of_3 adult">
+                                                            <h5>Paket</h5>
+                                                            <div class="section_room">
+
+                                                                <select id="Paket" name="Paket">
+                                                                    <option value="0">Pilih Paket Tour</option>
+                                                                   {%for r in reservasi%}
+                                                                   <option value="{{r.Harga}}">{{r.Paket}}</option>
+                                                                   {%endfor%}
+                                                                </select>
+
+                                                            </div>
+                                                        </li>
+
+                                                    <div class="clearfix"></div>
+                                                        <li class="span1_of_3 adult">
+                                                            <div class="book_date">
+
+                                                                    <span aria-hidden="true">
+                                                                        <h5>Jumlah Orang</h5>
+                                                                    </span>
+                                                                    <select id="Jumlah_Pax" name="Jumlah_Pax">
+                                                                        <option>Jumlah Pax</option>
+                                                                            <option value="0">0</option>
+                                                                            <option value="1">1 orang</option>
+                                                                            <option value="2">2 orang</option>
+                                                                            <option value="3">3 orang</option>
+                                                                            <option value="4">4</option>
+                                                                            <option value="5">5</option>
+                                                                            <option value="6">6</option>
+                                                                            <option value="7">7</option>
+                                                                            <option value="8">8</option>
+                                                                            <option value="9">9</option>
+                                                                            <option value="10">10</option>
+                                                                            <option value="11">11</option>
+                                                                            <option value="12">12</option>
+                                                                            <option value="13">13</option>
+                                                                            <option value="14">14</option>
+                                                                            <option value="15">15</option>
+                                                                            <option value="16">16</option>
+                                                                            <option value="17">17</option>
+                                                                            <option value="18">18</option>
+                                                                            <option value="19">19</option>
+                                                                            <option value="20">20</option>
+                                                                            <option value="21">21</option>
+                                                                            <option value="22">22</option>
+                                                                            <option value="23">23</option>
+                                                                            <option value="24">24</option>
+                                                                            <option value="25">25</option>
+                                                                            <option value="26">26</option>
+                                                                            <option value="27">27</option>
+                                                                            <option value="28">28</option>
+                                                                            <option value="29">29</option>
+                                                                            <option value="30">30</option>
+                                                                            <option value="31">31</option>
+                                                                            <option value="32">32</option>
+                                                                            <option value="33">33</option>
+                                                                            <option value="34">34</option>
+                                                                            <option value="35">35</option>
+                                                                            <option value="36">36</option>
+                                                                            <option value="37">37</option>
+                                                                            <option value="38">38</option>
+                                                                            <option value="39">39</option>
+                                                                            <option value="40">40</option>
+                                                                            <option value="41">41</option>
+                                                                            <option value="42">42</option>
+                                                                            <option value="43">43</option>
+                                                                            <option value="44">44</option>
+                                                                            <option value="45">45</option>
+                                                                            <option value="46">46</option>
+                                                                            <option value="47">47</option>
+                                                                            <option value="48">48</option>
+                                                                            <option value="49">49</option>
+                                                                            <option value="50">50</option>
+                                                                    </select>
+
+                                                            </div>
+                                                            </li>
+                                                        </li>
+                                                        <div class="clearfix"></div>
+                                                    </ul>
+                                                </div>
+                                                 <div class="reservation">
+                                                    <ul>
+                                                        <li class="span1_of_1 desti1" id="Harga">
+                                                            <div class="book_date">
+                                                                    </br>
+                                                                    <span aria-hidden="true">
+                                                                    </span>
+
+                                                                    <input type="text" placeholder="Harga" id="Harga" name="Harga" class="typeahead1 input-md form-control tt-input" required>
+
+                                                            </div>
+                                                        </li>
+                                                         <li class="span1_of_1 desti1" id="Total">
+                                                            <div class="book_date">
+
+                                                                    </br>
+                                                                    <span aria-hidden="true">
+                                                                    </span>
+                                                                    <input type="text" placeholder="Total" id="Total" name="Total" class="typeahead1 input-md form-control tt-input" required>
+
+                                                            </div>
+                                                        </li>
+                                                        <div class="clearfix"></div>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="reservation">
+                                                <ul>
+                                                    <li class="span1_of_3">
+                                                        <div class="date_btn">
+
+                                                                </br>
+                                                                <input type="submit" value="Submit">
+
+                                                            </form>
+                                                        </div>
+                                                    </li>
+                                                     </form>
+                                                    <div class="clearfix"></div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             </div>
+                    <div class="login">
+                    <a href="/">Home</a>
+                    <a href="/pesan_reservasi">Pilih Destinasi Lain</a>
+                </div>
+
+        </br>
+        </br>
+<!-- //banner -->
+<!-- //banner -->
+        </body>
+    </html>
+
+

@@ -1,0 +1,12 @@
+.isiTextArea{
+    font-family:"Lucida Sans Unicode",Corbel,TrebuchetMS,Verdana,sans-serif;
+    font-weight:bold;
+    letter-spacing:-1px;
+    font-size:24px;
+    line-height:1.2em;
+    color:#333;
+    border:0;
+    overflow:auto;
+    width:725px;
+    background:transparent;
+}

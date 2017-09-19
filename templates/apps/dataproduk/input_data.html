@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input Data</title>
+</head>
+<body>
+	<h1>Silakan input data Destinasi</h1>
+	<form method="POST" action="/simpan1">
+		{% csrf_token %}
+		<p><label>Destinasi </label><input type="text" id="Tempat" name="Tempat" placeholder="Destinasi"><br></p>
+		<p><label>Deskripsi Destinasi </label><textarea name="Deskripsi" cols="50" rows="20"></textarea> <br></p>
+		<input type="submit" value="Simpan">
+	</form>
+<p>
+
+</body>
+</html>

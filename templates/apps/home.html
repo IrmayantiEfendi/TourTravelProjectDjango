@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+<h1>Home</h1>
+<h3 align="center">Selamat Datang {{user}}</h3>
+
+    <p><a href="{% url 'view_profile' %}">Profile</a></p>
+    <p><a href="/dataproduk">Data Produk</a></p>
+    <p><a href="/pesan_tour">Pemesanan Tour</a></p>
+    <p><a href="/pengguna">Pengaturan Pengguna</a></p>
+    <p><a href="/change-password/">Ubah Password</a></p>
+    <p><a href="/logout/">Logout</a></p>
+
+</div>
+{% endblock %}

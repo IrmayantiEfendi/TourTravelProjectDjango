@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit data</title>
+</head>
+<body>
+	<form method="POST" action="/ganti_reservasi/{{reservasi.id}}">
+		{% csrf_token %}
+		<p><label>Destinasi  </label> 
+		<select>
+			{%for d in destinasi%}
+			<option value="{{d.id}}">{{d.Tempat}}</option>
+			{%endfor%}
+		</select>
+		<p><label>Nama Paket </label><input type="text" id="Paket" name="Paket" value="{{ reservasi.Paket}}" ></p>
+		<p><label>Keterangan Paket </label> <textarea name="Deskripsi" id="Deskripsi" rows=30" cols="100">{{reservasi.Deskripsi}}</textarea> </p>
+		<p><label>Harga </label><input type="text" name="Harga" id="Harga" value="{{reservasi.Harga}}"></p>
+		<p><input type="submit" value="Edit"></p>
+	</form>
+</body>
+</html>

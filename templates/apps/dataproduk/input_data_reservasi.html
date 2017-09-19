@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input Data Reservasi Baru</title>
+</head>
+<body>
+
+	<h1>Silakan input data Reservasi</h1>
+	<form method="POST" action="/simpan2">
+		{% csrf_token %}
+		<label>Destinasi </label>
+		<select name="code_paket_id">
+			{%for d in destinasi %}
+			<option value="{{ d.id}}">{{d.Tempat}}</option>
+			{%endfor%}
+		</select>
+		
+		<p><label>Paket </label><input type="text" name="Paket" placeholder="Paket"></p>
+		<p><label>Deskripsi Paket </label><textarea name="Deskripsi" cols="50" rows="20"></textarea> <br></p>
+		<p><label>Harga </label><input type="text" name="Harga" placeholder="Harga"></p>
+		<input type="submit" value="Simpan">
+	</form>
+</p>
+
+
+</body>
+</html>

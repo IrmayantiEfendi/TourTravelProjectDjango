@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<ul>
+	<h1><strong>Data Produk</strong></h1>
+<h3>Destinasi Wisata</h3>		
+	<table border="1">
+		<tr>
+			<th>Nomor </th>
+			<th>Nama Tempat</th>
+			<th>Deskripsi Tempat</th>
+			<th>Aksi</th>
+		</tr>
+		{%for destinasi in destinasi%}
+		<tr>
+			<td>{{ forloop.counter }}</td>
+			<td>{{ destinasi.Tempat}}</td>
+			<td>{{ destinasi.Deskripsi }}</td>
+			<td><a href="/edit_data_destinasi/{{destinasi.id}}">Edit data |</a><a href="/delete_destinasi/{{destinasi.id}}"> Delete</a></td>
+		</tr>
+		{%endfor%}
+	</table>
+	<p><a href="/input">Input Destinasi Baru</a></p> <a href="/home">Back</a>
+<hr>
+<h3>Jenis Paket</h3>
+	<table border="1">
+		<tr>
+			<th>Nomor </th>
+			<th>Tempat Destinasi</th>
+			<th>Nama Paket   </th>
+			<th>Harga</th>
+			<th>Aksi</th>
+		</tr>
+		{%for reservasi in reservasi%}
+		<tr>
+			<td>{{forloop.counter}}</td>
+			<td>{{ reservasi.code_paket.Tempat }}</td>
+			<td>{{ reservasi.Paket }}</td>
+			<td>{{ reservasi.Harga }}</td>
+			<td><a href="/edit_data_reservasi/{{reservasi.id}}">Edit data |</a><a href="/delete/{{reservasi.id}}"> Delete</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+	<p><a href="/input_reservasi">Input Reservasi Baru</a></p>
+	<hr>
+	
+</ul>
+</body>
+</html>

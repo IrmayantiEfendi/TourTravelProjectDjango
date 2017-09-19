@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Destinasi</title>
+</head>
+<body>
+	<form method="POST" action="/ganti_destinasi/{{destinasi.id}}">
+		{% csrf_token %}
+		<p><label>Kode </label> <label>{{ destinasi.id }}</label></p>
+		<p><label>Tempat Destinasi </label><input type="text" id="Tempat" name="Tempat" value="{{ destinasi.Tempat}}" ></p>
+		<p><label>Deskripsi Destinasi </label><textarea name="Deskripsi" cols="50" rows="20"></textarea> <br></p>
+		<p><input type="submit" value="Edit"></p>
+	</form>
+</body>
+</html>
